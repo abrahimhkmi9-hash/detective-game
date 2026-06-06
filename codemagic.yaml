@@ -9,7 +9,6 @@ workflows:
         - push
     scripts:
       - name: Build APK
-        script: |
-          gradle assembleDebug
+        script: gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
