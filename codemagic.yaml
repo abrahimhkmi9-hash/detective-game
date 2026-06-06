@@ -1,14 +1,18 @@
 workflows:
   android-build:
     name: Android Build
-    instance_type: mac_mini_m1
-    environment:
+    instance_type: linux
+    os: ubuntu
+    runtimes:
       java: 17
     triggering:
       events:
         - push
     scripts:
       - name: Build APK
-        script: gradle assembleDebug
+        script: |
+          ls -la
+          gradle -version
+          gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
