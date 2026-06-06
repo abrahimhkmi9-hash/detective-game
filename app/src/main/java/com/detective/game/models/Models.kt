@@ -1,0 +1,7 @@
+package com.detective.game.models
+import com.google.gson.annotations.SerializedName
+data class GameCase(@SerializedName("id") val id: Int, @SerializedName("title") val title: String, @SerializedName("description") val description: String, @SerializedName("location") val location: String, @SerializedName("difficulty") val difficulty: Int, @SerializedName("time_limit") val timeLimit: Int, @SerializedName("suspects") val suspects: List<Suspect>, @SerializedName("evidence") val evidence: List<Evidence>, @SerializedName("guilty_id") val guiltyId: Int, @SerializedName("solution_text") val solutionText: String)
+data class Suspect(@SerializedName("id") val id: Int, @SerializedName("name") val name: String, @SerializedName("role") val role: String, @SerializedName("statements") val statements: List<Statement>, var isSelected: Boolean = false)
+data class Statement(@SerializedName("id") val id: Int, @SerializedName("text") val text: String, @SerializedName("is_lie") val isLie: Boolean, @SerializedName("contradicts_ev_id") val contradictsEvId: Int)
+data class Evidence(@SerializedName("id") val id: Int, @SerializedName("title") val title: String, @SerializedName("description") val description: String, @SerializedName("icon") val icon: String, @SerializedName("proves_lie_for") val provesLieFor: Int, var isCollected: Boolean = false)
+data class GameResult(val caseId: Int, val solved: Boolean, val timeUsed: Int, val totalTime: Int, val correctSuspect: Boolean, val evidenceFound: Int, val totalEvidence: Int, val stars: Int)

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:background="@color/bg_dark" android:layoutDirection="rtl">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="🔍" android:textSize="56sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="محقق الجرائم" android:textSize="28sp" android:textStyle="bold"
+        android:textColor="@color/gold_accent" android:layout_marginTop="8dp"/>
+    <TextView android:id="@+id/tvLevel" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="المستوى 1"
+        android:textSize="14sp" android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp"/>
+    <TextView android:id="@+id/tvSolved" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="القضايا المحلولة: 0"
+        android:textSize="13sp" android:textColor="@color/text_dim"
+        android:layout_marginTop="2dp"/>
+    <View android:layout_width="200dp" android:layout_height="1dp"
+        android:background="@color/border_color" android:layout_margin="24dp"/>
+    <Button android:id="@+id/btnNewCase" style="@style/BtnGold"
+        android:layout_width="240dp" android:layout_height="52dp"
+        android:text="قضايا قيد التحقيق" android:textSize="16sp"/>
+    <Button android:id="@+id/btnArchive" style="@style/BtnOutline"
+        android:layout_width="240dp" android:layout_height="52dp"
+        android:text="أرشيف القضايا" android:textSize="16sp"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>
